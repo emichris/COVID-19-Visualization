@@ -18,7 +18,9 @@ df_conf_us_melt = pd.melt(df_conf_us, id_vars=['UID', 'iso2', 'iso3', 'code3', '
        'Country_Region', 'Lat', 'Long_', 'Combined_Key'], var_name='date', value_name='numcases')
 df_death_glo_melt = pd.melt(df_death_glo, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'],
                             var_name='date', value_name='numdeaths')
-df_death_us_melt = pd.melt(df_death_us,  id_vars=['UID', 'iso2', 'iso3', 'code3', 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Lat', 'Long_', 'Combined_Key'], var_name='date', value_name='numdeaths')
+df_death_us_melt = pd.melt(df_death_us,  id_vars=['UID', 'iso2', 'iso3', 'code3', 'FIPS', 'Admin2', 
+                          'Province_State', 'Country_Region', 'Lat', 'Long_', 'Combined_Key', 'Population'], 
+                           var_name='date', value_name='numdeaths')
 df_recov_glo_melt = pd.melt(df_recov_glo, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], 
                            var_name='date', value_name='numrecovered')
 
@@ -26,8 +28,8 @@ df_recov_glo_melt = pd.melt(df_recov_glo, id_vars=['Province/State', 'Country/Re
 # Remove irrelevant columns and rename columns
 df_conf_us_melt  = df_conf_us_melt[['Country_Region', 'Province_State', 'Admin2', 'date', 'numcases']]
 df_conf_us_melt.columns = ['Country/Region', 'Province/State', 'City', 'date', 'numcases']
-df_death_us_melt = df_death_us_melt[['Country_Region', 'Province_State', 'Admin2', 'date', 'numdeaths']]
-df_death_us_melt.columns = ['Country/Region', 'Province/State', 'City', 'date', 'numdeaths']
+df_death_us_melt = df_death_us_melt[['Country_Region', 'Province_State', 'Admin2', 'Population', 'date', 'numdeaths']]
+df_death_us_melt.columns = ['Country/Region', 'Province/State', 'City', 'Population', 'date', 'numdeaths']
 
 
 # Fill N/As
