@@ -40,16 +40,10 @@ daily-death rate in the US
 
 
 ### Report 
-A. **Intro:** 
-B. Should COVID-19 be taken seriously? Yes..because of the rapid growth in the number of deaths. 
-C. What can we do? 
+A. **Intro:** <br>
+B. Should COVID-19 be taken seriously? Yes..because of the rapid growth in the number of deaths. <br>
+C. What can we do? <br>
     Look at recovery rates and get recommendation from countires with high recovery rates.
     Given the nature of ho the virus spreads, limit travel from or to countries with high number cases. 
     Also within US, place order for people from states with enormously high number of cases in self-quarantine. 
     
-
-    
-
-
-
-
